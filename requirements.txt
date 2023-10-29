@@ -1,0 +1,6 @@
+obd
+pyfiglet
+python-can
+pyserial
+scapy[complete]
+termcolor

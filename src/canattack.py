@@ -112,12 +112,12 @@ def main():
             case 2:
                 input_target_id = input(f"{MCI.PROMPT} Insert Target-ID: ")
                 input_data = input(f"{MCI.PROMPT} Insert data: ")
-                input_count = input(f"{MCI.PROMPT} How many packets do you want to send: ")
+                input_count = int(input(f"{MCI.PROMPT} How many packets do you want to send: "))
                 can_socket.imitate(target=input_target_id, data=input_data, count=input_count)
                 break
             case 3:
-                input_time = input(f"{MCI.PROMPT} How long do you want to dump (s): ")
-                input_iterations = input(f"{MCI.PROMPT} How many times the dump should be replayed: ")
+                input_time = int(input(f"{MCI.PROMPT} How long do you want to dump (s): "))
+                input_iterations = int(input(f"{MCI.PROMPT} How many times the dump should be replayed: "))
                 replay_traffic(core.CAN_INTERFACE, input_time, input_iterations)
                 break
             case 4:

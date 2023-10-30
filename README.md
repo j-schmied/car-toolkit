@@ -34,10 +34,10 @@ options:
 
 #### Examples
 
-* `./CANAttack.py -i vcan0 -m vcan1`: Standardkonfiguration mit virtuellen Bussen
-* `./CANAttack.py -i can0 -m vcan1`: Benutzung eines physischen CAN-Interface mit vcan1 als MITM Bus
-* `./CANAttack.py -p 0x001`: Priority ID ist 0x001
-* `./CANAttack.py -c COM9`: OBDLink SX benutzt COM-Port 9
+* `./CANAttack.py -i vcan0 -m vcan1`: default configuration using two virtual CAN interfaces
+* `./CANAttack.py -i can0 -m vcan1`: using one physical CAN interface (can0) with vcan1 as MITM bus
+* `./CANAttack.py -p 0x001`: Priority ID is 0x001
+* `./CANAttack.py -c COM9`: OBDLink SX uses COM-Port 9
 
 ### CANReverse
 
@@ -104,8 +104,8 @@ Note:
 
 #### Examples
 
-* `./setup_vtb.sh --skip-update --random`: Update überspringen und zufälligen Traffic
-* `./setup_vtb.sh --icsim`: Update und IC Simulation
+* `./setup_vtb.sh --skip-update --random`: skip update and generate random traffic
+* `./setup_vtb.sh --icsim`: update and start IC Simulation
 
 ## Planned extensions
 

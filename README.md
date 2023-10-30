@@ -4,8 +4,8 @@ Toolkit providing various tools for automotive penetration testing
 
 ## Tools
 
-- CAN Suite (CANAttack, CANReverse, CANBrute)
-- CARAL
+- [CAN Suite](src/can-suite/README.md) (CANAttack, CANReverse, CANBrute)
+- [CARAL](src/car-analysis/README.md)
 
 ## Scripts
 

@@ -13,15 +13,18 @@ CLI_ARGUMENTS=$*
 stty -echoctl # hide ^C
 
 print_help() {
-  echo "[i] Usage: [sudo] ./setup_vtb [--skip-update] [--random|--icsim]"
+  echo "usage: [sudo] ./setup_vtb [--help][--skip-update] [--random|--icsim]"
   echo
-  echo -e "\t--skip-update, -s: Skips environment update before starting the script"
+  echo -e "options:"
+  echo -e "  --help, -h:        show this help message and exit"
+  echo -e "  --skip-update, -s: Skips environment update before starting the script"
   echo
-  echo -e "\t--random, -r:      Generates random can traffic on interface vcan0"
-  echo -e "\t--icsim, -i:       Starts Instrument Cluster Simulation"
+  echo -e "  --random, -r:      Generates random can traffic on interface vcan0"
+  echo -e "  --icsim, -i:       Starts Instrument Cluster Simulation"
   echo
-  echo -e "\tNote: either --random or --icsim can be used!"
-  echo -e "\tNote: sudo can be specified when starting script or will be automatically called while running."
+  echo -e "Note:" 
+  echo -e "  - either --random or --icsim can be used!"
+  echo -e "  - sudo can be specified when starting script or will be automatically called while running."
 }
 
 # Display help and exit (you better not proceed before getting help)

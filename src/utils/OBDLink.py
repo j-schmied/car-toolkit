@@ -11,7 +11,7 @@ import os
 import platform
 import sys
 
-from core import is_valid_com_port
+from .core import is_valid_com_port
 from dataclasses import dataclass
 from re import match
 from time import sleep
@@ -48,8 +48,8 @@ class OBDCommands:
         """Print available Commands"""
         print("-" * 56)
 
-        for i, option in enumerate(ODBCommands.OPTIONS):
-            print(f"[{i}] {option}")
+        for i, option in enumerate(OBDCommands.OPTIONS):
+            print(f"[{i+1}] {option}")
 
         print("[0] Exit")
 
@@ -81,7 +81,7 @@ class OBDConnection:
             while True:
                 res = self.connection.query(cmd)
                 print(f"[*] Response: {cmd!a}: {res}")
-                if cmd in [ODBCommands.ELM_VERSION, ODBCommands.ELM_VOLTAGE, ODBCommands.CLEAR_DTC, ODBCommands.CURRENT_DTC, ODBCommands.GET_DTC]:
+                if cmd in [OBDCommands.ELM_VERSION, OBDCommands.ELM_VOLTAGE, OBDCommands.CLEAR_DTC, OBDCommands.CURRENT_DTC, OBDCommands.GET_DTC]:
                     # These commands don't need to be executed multiple times
                     break
                 sleep(self.refresh_rate)

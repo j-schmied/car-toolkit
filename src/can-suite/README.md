@@ -83,28 +83,6 @@ options:
   --interface INTERFACE, -i INTERFACE
 ```
 
-### Setup Virtual Test Bench
-
-```bash
-usage: [sudo] ./setup_vtb.sh [--skip-update] [--random|--icsim]
-
-options:
-    -h, --help         show this help message and exit
-    --skip-update, -s: Skips environment update before starting the script
-
-    --random, -r:      Generates random can traffic on interface vcan0
-    --icsim, -i:       Starts Instrument Cluster Simulation
-
-Note: 
-    - either --random or --icsim can be used!
-    - sudo can be specified when starting script or will be automatically called while running.
-```
-
-#### Examples
-
-* `./setup_vtb.sh --skip-update --random`: skip update and generate random traffic
-* `./setup_vtb.sh --icsim`: update and start IC Simulation
-
 ## Planned extensions
 
 * XCP integration for ECU recalibration/reprogramming 

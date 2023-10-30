@@ -9,12 +9,21 @@
 import sys
 from dataclasses import dataclass
 from os import getcwd, listdir
+from re import match
 from shlex import split
 from subprocess import Popen, PIPE
 from sys import maxsize
+from time import sleep 
 
-from OBDLink import *
-from PCAN import *
+from __version__ import __version__
+
+
+# Compatibility Mode for non UNIX devices
+COMPATIBILITY: bool = False
+USE_PCAN: bool = False
+
+# from OBDLink import *
+from .PCAN import *
 
 if COMPATIBILITY:
     from scapy.contrib.cansocket_python_can import CANSocket  # used for non can-utils devices
@@ -28,13 +37,8 @@ from termcolor import colored
 # Show extended error messages
 DEBUG: bool = True
 
-# Compatibility Mode for non UNIX devices
-COMPATIBILITY: bool = False
-
-USE_PCAN: bool = False
-
 # Constants
-VERSION = "1.0.0rc1"
+VERSION = __version__
 BASE_PATH: str = getcwd()
 BAUDRATE = PCAN_BAUD_500K
 DEFAULT_CHANNEL = PCAN_USBBUS1

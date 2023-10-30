@@ -14,7 +14,7 @@ setup(name="python-rts",
       url="https://github.com/j-schmied",
       author="Jannik Schmied",
       author_email="jannik.schmied@pm.me",
-      license="MIT",
+      license="GPLv3",
       install_requires=[
           "keyboard",
           "matplotlib",

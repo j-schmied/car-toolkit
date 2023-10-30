@@ -1,6 +1,13 @@
+keyboard
+matplotlib
+numpy
 obd
+pandas
+psutil
 pyfiglet
 python-can
+python_ics
 pyserial
 scapy[complete]
+seaborn
 termcolor
